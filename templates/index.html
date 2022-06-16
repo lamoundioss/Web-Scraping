@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/jquery-3.3.1.slim.min.js"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <div class="menu"></div>
+        <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="deroulant" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="deroulanta">
+                <a class="dropdown-item" href="#">SAMSUNG</a>
+                <a class="dropdown-item" type="#">IPHONE</a>
+                <span class="dropdown-item-text">TECHNO</span>
+            </div>
+        </div>
+      <div> -->
+
+
+    <div class="content">
+        <div class="entete">
+            <h1>BIENBENUE SUR VOTRE SITE DE COMPARAISON DE PRODUIT E-MARKET</h1>
+        </div>
+        
+        <div class="corps">
+            <div class='body_name'>
+                <div class="name_vendeur">
+                    <h1>JUMIA</h1>
+                </div>
+                <div class="name_vendeur">
+                    <h1>SOUMARI</h1>
+                </div>
+                <div class="name_vendeur">
+                    <h1>NOVA</h1>
+                </div>
+            </div>
+            <div class='body_content'>
+                <div class="sous_div">
+                    {% for elem in range(n[0]) %}
+                    <div class="product">
+                        <h3><strong>Marque : </strong> {{ data_jumia[elem].marque }}</h3>
+                        <h3><strong>Modele : </strong>{{ data_jumia[elem].modele }}</h3>
+                        <h3><strong>Memoire ROM : </strong></h3>
+                        <h3><strong>Memoire RAM : </strong></h3>
+                        <span><strong> Price : </strong>{{ data_jumia[elem].price }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="sous_div">
+                    {% for elem in range(n[1]) %}
+                    <div class="product">
+                        <h3>Marque : {{ data_soumari[elem].marque }}</h3>
+                        <h3><strong>Modele : </strong>{{ data_soumari[elem].modele }}</h3>
+                        <h3><strong>Memoire ROM : </strong></h3>
+                        <h3><strong>Memoire RAM : </strong></h3>
+                        <span><strong> Price : </strong>{{ data_soumari[elem].price }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="sous_div">
+                    {% for elem in range(n[2]) %}
+                    <div class="product">
+                        <h3>Marque : {{ data_nova[elem].marque }}</h3>
+                        <h3><strong>Modele : </strong>{{ data_nova[elem].modele }}</h3>
+                        <h3><strong>Memoire ROM : </strong></h3>
+                        <h3><strong>Memoire RAM : </strong></h3>
+                        <span><strong> Price : </strong>{{ data_nova[elem].price }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="deroulant" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="deroulanta">
+                <a class="dropdown-item" href="#">SAMSUNG</a>
+                <a class="dropdown-item" href="#">IPHONE</a>
+                <a class="dropdown-item" href="#">TECHNO</a>
+            </div>
+        </div>
+      
+    </div>
+
+</body>
+</html>
